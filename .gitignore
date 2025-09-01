@@ -1,0 +1,60 @@
+# ---- OS junk ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ---- Global env/secrets ----------------------------------------------------
+.env
+*.env
+!.env.example
+
+# ---- Backend (Python / FastAPI) -------------------------------------------
+backend/.env
+backend/.venv/
+backend/venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.eggs/
+*.egg-info/
+dist/
+build/
+# local vector indexes / uploads
+backend/data/faiss/
+backend/data/uploads/
+# logs
+backend/*.log
+backend/logs/
+
+# ---- Frontend (Next.js / Node) --------------------------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env*.local
+frontend/.vercel/
+# logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+# Next cache
+frontend/.turbo/
+# build artifacts
+frontend/.cache/
+
+# ---- Editor / IDE ----------------------------------------------------------
+.vscode/
+.idea/
+
+# ---- Docker / Containers (if you add later) --------------------------------
+docker-compose.override.yml
+*.local.yaml
