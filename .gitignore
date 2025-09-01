@@ -1,32 +1,27 @@
-# ---- OS junk ---------------------------------------------------------------
+# --- OS junk ---
 .DS_Store
 Thumbs.db
 
-# ---- Global env/secrets ----------------------------------------------------
+# --- Env / secrets ---
 .env
 *.env
 !.env.example
-
-# ---- Backend (Python / FastAPI) -------------------------------------------
 backend/.env
+frontend/.env.local
+frontend/.env*.local
+
+# --- Backend (Python / FastAPI) ---
 backend/.venv/
-backend/venv/
 __pycache__/
 *.py[cod]
 *.pyo
-*.pyd
-*.so
 .pytest_cache/
 .mypy_cache/
-.pytype/
 .ruff_cache/
+.pytype/
 .coverage
-coverage.xml
 htmlcov/
-.eggs/
-*.egg-info/
-dist/
-build/
+coverage.xml
 # local vector indexes / uploads
 backend/data/faiss/
 backend/data/uploads/
@@ -34,27 +29,26 @@ backend/data/uploads/
 backend/*.log
 backend/logs/
 
-# ---- Frontend (Next.js / Node) --------------------------------------------
+# --- Frontend (Next.js) ---
 frontend/node_modules/
 frontend/.next/
 frontend/out/
-frontend/.env.local
-frontend/.env*.local
-frontend/.vercel/
+frontend/.turbo/
+frontend/.cache/
 # logs
 frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
 frontend/pnpm-debug.log*
-# Next cache
-frontend/.turbo/
-# build artifacts
-frontend/.cache/
+frontend/package-lock.json
 
-# ---- Editor / IDE ----------------------------------------------------------
+# Vercel (if you use it)
+frontend/.vercel/
+
+# --- Editors / IDEs ---
 .vscode/
 .idea/
 
-# ---- Docker / Containers (if you add later) --------------------------------
+# --- Docker / local overrides (if you add later) ---
 docker-compose.override.yml
 *.local.yaml
